@@ -27,7 +27,7 @@ public:
 	void setsalary(double salary);
 	
 	double getsalary();
-
+      vector<Client*>* getClients();
 	bool addclient(Client* Client);
 
 
