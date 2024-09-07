@@ -33,6 +33,9 @@
 	double Employee::getsalary() {
 		return this->salary;
 	}
+vector<Client*>* Employee::setClients() {
+	return this->clients;
+}
 
 	bool Employee::addclient(Client* Client){
 		this->clients->push_back(Client);
