@@ -33,7 +33,7 @@
 	double Employee::getsalary() {
 		return this->salary;
 	}
-vector<Client*>* Employee::setClients() {
+vector<Client*>* Employee::getClients() {
 	return this->clients;
 }
 
