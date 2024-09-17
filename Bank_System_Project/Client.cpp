@@ -5,12 +5,19 @@ int Client::clientCounter = 100;
     Client::Client() :Person(), balance(0) {
         clientCounter++;
         setid(clientCounter);
+        //Client::allClients ;
     };
     
     Client::Client( string password, string name,  double balance):Person(password,name) {
-        setBalance(balance);
         clientCounter++;
         setid(clientCounter);
+        setBalance(balance);
+       ///* for (int i = 0; i < Client::allClients.size(); i++) {
+       //     Client::allClients.at(i)->setid(clientCounter);
+       //     Client::allClients.at(i)->Person::setpassword(password);
+       //     Client::allClients.at(i)->Person::setname(name);
+       //     Client::allClients.at(i)->setBalance(balance);
+       // }*/
     }
 
     bool Client::setBalance(double balance) {
@@ -62,5 +69,7 @@ int Client::clientCounter = 100;
         Person::dispaly();
         cout << "Balance: " << getBalance() << endl;
     }
+
+   
 
 

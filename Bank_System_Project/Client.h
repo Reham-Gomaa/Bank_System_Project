@@ -4,17 +4,18 @@
 #include <cctype>
 #include "validation.h"
 #include "Person.h"
+#include "DataSourseInterface.h"
+#include "FileManager.h"
+#include "Parser.h"
 
 using namespace std;
 
 class Client : public Person {
 private:
     static int clientCounter;
-    string password;
     double balance;
 
 public:
-    string name;
 
     Client();
 
@@ -33,6 +34,10 @@ public:
     void transfer(Client& otherClient, double amount);
 
     void dispaly();
+
+    static vector<Client*> allClients;
+
+    
  
     ~Client() {};
 };

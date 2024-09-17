@@ -19,6 +19,12 @@
     <Filter Include="Source Files\cpp">
       <UniqueIdentifier>{4bb8472f-c18d-4b5c-9dbf-839aa5e12329}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{c66e9f0f-d74b-4974-af29-8a2007cec7c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{6e48e982-f631-4a6b-aa8e-b01f3bc4a54a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="index.cpp">
@@ -34,6 +40,12 @@
       <Filter>Source Files\cpp</Filter>
     </ClCompile>
     <ClCompile Include="Validation.cpp">
+      <Filter>Source Files\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>Source Files\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser.cpp">
       <Filter>Source Files\cpp</Filter>
     </ClCompile>
   </ItemGroup>
@@ -52,6 +64,15 @@
     </ClInclude>
     <ClInclude Include="Validation.h">
       <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DataSourseInterface.h">
+      <Filter>Header Files\core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
