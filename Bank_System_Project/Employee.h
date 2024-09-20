@@ -44,5 +44,7 @@ public:
 
 	static vector<Employee*> allEmployees;
 
+	static void pushallemployees(Employee e);
+
 	~Employee() {};
 };

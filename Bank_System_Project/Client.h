@@ -37,7 +37,7 @@ public:
 
     static vector<Client*> allClients;
 
-    
+    static void pushallclients(Client c);
  
     ~Client() {};
 };

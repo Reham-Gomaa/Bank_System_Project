@@ -7,20 +7,12 @@ Admin::Admin() : Employee() {
 	adminCounter++;
 	setid(adminCounter);
 	this->Employees = new vector<Employee*>();
-	//Admin::allAdmins;
 }
 
 Admin::Admin(string password, string name, double salary, vector<Client*>* clients, vector<Employee*>* employee) :Employee(password, name, salary, clients) {
 	adminCounter++;
 	setid(adminCounter);
 	setEmployees(employee);
-	/*for (int i = 0; i < Admin::allAdmins.size(); i++) {
-		Admin::allAdmins.at(i)->setid(adminCounter);
-		Admin::allAdmins.at(i)->Employee::setpassword(password);
-		Admin::allAdmins.at(i)->Employee::setname(name);
-		Admin::allAdmins.at(i)->Employee::setsalary(salary);
-		Admin::allAdmins.at(i)->setEmployees(employee);
-	}*/
 }
 
 void Admin::setEmployees(vector<Employee*>* employee) {
@@ -69,4 +61,8 @@ void Admin::dispaly() {
 	cout << "Salary: " << getsalary() << endl;
 	cout << "list of employees:\n";
 	listAllEmployees();
+}
+
+void Admin::pushAllAdmins(Admin a) {
+	Admin::allAdmins.push_back(a);
 }

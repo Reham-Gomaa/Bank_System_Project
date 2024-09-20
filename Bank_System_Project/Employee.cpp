@@ -8,7 +8,6 @@ Employee::Employee() :Person(), salary(0) {
 	numberOfemployee++;
 	this->setid(numberOfemployee);
 	this->Clients = new vector<Client*>();
-	//Employee::allEmployees;
 }
 
 Employee::Employee(string password, string name, double salary, vector<Client*>* clients) :Person(password, name) {
@@ -16,13 +15,6 @@ Employee::Employee(string password, string name, double salary, vector<Client*>*
 	this->setid(numberOfemployee);
 	setsalary(salary);
 	setClients(clients);
-	/*for (int i = 0; i < Employee::allEmployees.size(); i++) {
-		Employee::allEmployees.at(i)->setid(numberOfemployee);
-		Employee::allEmployees.at(i)->Person::setpassword(password);
-		Employee::allEmployees.at(i)->Person::setname(name);
-		Employee::allEmployees.at(i)->setsalary(salary);
-		Employee::allEmployees.at(i)->setClients(clients);
-	}*/
 }
 
 bool Employee::setClients(vector<Client*>* clients)
@@ -87,4 +79,8 @@ void Employee::dispaly() {
 	cout << "Salary: " << getsalary() << endl;
 	cout << "list of clients:\n";
 	listallclients();
+}
+
+void Employee::pushallemployees(Employee e) {
+	Employee::allEmployees.push_back(e);
 }
