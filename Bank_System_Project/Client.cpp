@@ -64,7 +64,7 @@ int Client::clientCounter = 100;
     }
 
     void Client::pushallclients(Client c) {
-        Client::allClients.push_back(c);
+        Client::allClients.push_back(&c);
     }
    
 

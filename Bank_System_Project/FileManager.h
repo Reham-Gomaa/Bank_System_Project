@@ -4,6 +4,7 @@
 #include "Parser.h"
 
 #include <fstream>
+#include<vector>
 
 using namespace std;
 
@@ -60,8 +61,7 @@ public:
 		fstream file("client.txt", ios::in);
 		string line;
 		while (getline(file, line)) {
-			Client *c = Parser::parseClient(line);
-			Client::allClients.push_back(c);
+			Parser::parseClient(line);
 		}
 		file.close();
 	}
@@ -70,8 +70,7 @@ public:
 		fstream file("employee.txt", ios::in);
 		string line;
 		while (getline(file, line)) {
-			Employee *e = Parser::parseEmployee(line);
-			Employee::allEmployees.push_back(e);
+			Parser::parseEmployee(line);
 		}
 		file.close();
 	}
@@ -80,8 +79,7 @@ public:
 		fstream file("admin.txt", ios::in);
 		string line;
 		while (getline(file, line)) {
-			Admin* a = Parser::parseAdmin(line);
-			Admin::allAdmins.push_back(a);
+			Parser::parseAdmin(line);
 		}
 		file.close();
 	}

@@ -31,37 +31,39 @@ int main()
 
 	cout << "\n\n=================================\n\n";
 
-	// Employee e;
+	Employee e;
 	Client* p = &c;
-	vector<Client*>* ptr = new vector<Client*>();
-	ptr->push_back(p);
-	vector<Employee*>* po = new vector<Employee*>();
+	vector<Client*> ptr;
+	ptr.push_back(p);
+	vector<Employee*> po;
 	
 
-	// e.setname("yasmin");
-	// e.setpassword("12345678");
-	// e.setsalary(10000);
-	// e.setClients(ptr);
-	// Employee* pp = &e;
-	// po->push_back(pp);
+	e.setname("yasmin");
+	e.setpassword("12345678");
+	e.setsalary(10000);
+	e.setClients(ptr);
+
+	Employee* pp = &e;
+	po.push_back(pp);
 	cout << "all clients  1\n";
-	// e.listallclients();
+	e.listallclients();
 	cout << "\n------------------------------\n";
 	p = &x;
-	// e.addclient(p);
+	e.addclient(x);
 	cout << "all clients   2\n";
-	// e.listallclients();
+	e.listallclients();
 	cout << "\n------------------------------\n";
-	// e.editClientInfo(555, "ahmed", "1234567", 50000 );
+
+	e.editClientInfo(555, "ahmed", "1234567", 50000 );
 	cout << "client after editing\n";
 	c.dispaly();
 	cout << "\n------------------------------\n";
 	cout << "all clients   3\n";
-	// e.listallclients();
+	 e.listallclients();
 	cout << "\n------------------------------\n";
-	// e.searchClientById(x.getid());
+	e.searchClientById(x.getid());
 	cout << "\n------------------------------\n";
-	// e.dispaly();
+	e.dispaly();
 
 	cout << "\n\n=================================\n\n";
 
@@ -76,11 +78,11 @@ int main()
 	a.setClients(ptr);
 	a.setEmployees(po);
 
-	a.addclient(p);
+	//a.addclient(p);
 	a.listallclients();
 	cout << "\n\n=================================\n\n";
 
-	// a.addNewEmployee(pp);
+	a.addNewEmployee(ex);
 	a.listAllEmployees();
 	cout << "\n\n=================================\n\n";
 

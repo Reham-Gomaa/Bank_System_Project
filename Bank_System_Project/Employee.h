@@ -16,23 +16,24 @@ class Employee :public Person
 private:
 	static  int numberOfemployee;
 	double salary;
-	vector<Client*>* Clients;
+	vector<Client*> Clients;
 
 public:
 
 	Employee();
 
-	Employee(string password, string name, double salary, vector<Client*>* clients);
+	Employee(string password, string name, double salary, vector<Client*> clients);
 
-	bool setClients(vector<Client*>* clients);
+	bool setClients(vector<Client*> clients);
+	//bool setClients(Client clients);
 
-	vector<Client*>* getClients();
+	vector<Client*> getClients();
 
 	bool setsalary(double salary);
 
 	double getsalary();
 
-	void addclient(Client* Client);
+	void addclient(Client Client);
 
 	Client* searchClientById(int id);
 

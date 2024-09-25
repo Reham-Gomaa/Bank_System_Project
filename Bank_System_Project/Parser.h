@@ -22,7 +22,7 @@ public:
 		return tokens;
 	}
 
-	static Client *parseClient(string line) {
+	static void parseClient(string line) {
 		vector<string> tokens = split(line);
 		Client* c = new Client();
 		
@@ -30,11 +30,10 @@ public:
 		c->setname(tokens.at(1));
 		c->setpassword(tokens.at(2));
 		c->setBalance(stod(tokens.at(3)));
-
-		return c;
+		Client::allClients.push_back(c);
 	}
 
-	static Employee* parseEmployee(string line) {
+	static void parseEmployee(string line) {
 		vector<string> tokens = split(line);
 		Employee *e = new Employee();
 
@@ -42,11 +41,10 @@ public:
 		e->setname(tokens.at(1));
 		e->setpassword(tokens.at(2));
 		e->setsalary(stod(tokens.at(3)));
-
-		return e;
+		Employee::allEmployees.push_back(e);
 	}
 
-	static Admin* parseAdmin(string line) {
+	static void parseAdmin(string line) {
 		vector<string> tokens = split(line);
 		Admin* a = new Admin();
 
@@ -54,8 +52,7 @@ public:
 		a->setname(tokens.at(1));
 		a->setpassword(tokens.at(2));
 		a->setsalary(stod(tokens.at(3)));
-
-		return a;
+		Admin::allAdmins.push_back(a);
 	}
 };
 

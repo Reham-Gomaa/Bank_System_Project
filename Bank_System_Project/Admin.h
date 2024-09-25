@@ -4,27 +4,28 @@
 #include "DataSourseInterface.h"
 #include "FileManager.h"
 #include "Parser.h"
+#include<vector>
 
 class Admin :public Employee
 {
 private:
 	static int adminCounter;
-	vector<Employee*>* Employees;
+	vector<Employee*> Employees;
 public:
 
 	Admin();
 
 
-	Admin(string password, string name, double salary, vector<Client*>* clients, vector<Employee*>* employee);
+	Admin(string password, string name, double salary, vector<Client*> clients, vector<Employee*> employee);
 
 
-	void setEmployees(vector<Employee*>* employee);
+	void setEmployees(vector<Employee*> employee);
 
 
-	vector<Employee*>* getEmployees();
+	vector<Employee*> getEmployees();
 
 
-	void addNewEmployee(Employee* newemployee);
+	void addNewEmployee(Employee newemployee);
 
 
 	Employee* searchForEmployee(int id);

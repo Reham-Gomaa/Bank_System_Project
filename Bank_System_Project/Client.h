@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include<vector>
 #include "validation.h"
 #include "Person.h"
 #include "DataSourseInterface.h"
