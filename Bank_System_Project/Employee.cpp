@@ -18,7 +18,6 @@ Employee::Employee(string password, string name, double salary, vector<Client*> 
 }
 
 bool Employee::setClients(vector<Client*> clients)
-//bool Employee::setClients(Client clients)
 {
 
 	this->Clients = clients;
