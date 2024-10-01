@@ -25,7 +25,6 @@ public:
 	Employee(string password, string name, double salary, vector<Client*> clients);
 
 	bool setClients(vector<Client*> clients);
-	//bool setClients(Client clients);
 
 	vector<Client*> getClients();
 

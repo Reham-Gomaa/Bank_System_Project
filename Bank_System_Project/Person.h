@@ -57,18 +57,6 @@ public:
 		return this->name;
 	}
 
-	bool login(string pass, int idd) {
-		if (this->id != idd) {
-			cout << "Incorrect ID" << endl;
-			return false;
-		}
-		if (this->password != pass) {
-			cout << "Incorrect password" << endl;
-			return false;
-		}
-		return true;
-	}
-
 	void dispaly() {
 		cout << "ID: " << getid() << endl;
 		cout << "Name: " << getname() << endl;
